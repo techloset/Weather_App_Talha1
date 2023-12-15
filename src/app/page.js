@@ -45,7 +45,14 @@ const page = () => {
       </button>
 
       {weather.weather && (
-        <p>{weather.weather[0].main}</p>
+        <div>
+          <p>{weather.weather[0].main}</p>
+        <Image src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} 
+       alt="iamge"
+       width="100" 
+        height="100"
+        />
+        </div>
       )}
     </div>
   );
