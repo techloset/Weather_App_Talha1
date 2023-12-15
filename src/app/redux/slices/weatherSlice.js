@@ -22,14 +22,7 @@ const weatherSlice = createSlice({
   initialState: {},
 
   extraReducers: (builder) => {
-    builder.addCase(getQuizs.fulfilled, (state, action) => {
-        let newState: any = {
-          ...state,
-          quizs: action.payload,
-        };
-        return newState;
-      });
-  
+    
     builder.addCase(fetchWeatherAction.pending, (state, action) => {
       state.loading = true;
     });
